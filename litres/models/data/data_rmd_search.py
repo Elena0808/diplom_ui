@@ -1,0 +1,1 @@
+href_read_book = '/maks-fray/prostye-volshebnye-veschi/'

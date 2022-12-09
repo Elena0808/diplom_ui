@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "qa-guru-ui-diplom"
+version = "0.1.0"
+description = ""
+authors = ["eisaeva <hanymka@me.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+pytest = "^7.2.0"
+selene = "^2.0.0-b12"
+allure-pytest = "^2.12.0"
+faker = "^15.3.4"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+filterwarnings = [
+    "error",
+    "ignore::UserWarning",
+    'ignore: HTTPResponse.getheader\(\) is deprecated:DeprecationWarning'
+]
