@@ -17,6 +17,7 @@ class LoginPage(HomePage):
         browser.element('[class*="ButtonV1-module__button__orange"]').click()
         browser.element('[class*="AuthorizationPopup-module__input"]').type(email)
         browser.element('[class*=ButtonV1-module__button__orange]').click()
+        time.sleep(4)
         return self
 
     def login_by_phone(self):
@@ -25,6 +26,7 @@ class LoginPage(HomePage):
 
     def sent_password(self, password):
         browser.element('input[type="password"]').type(password)
+        time.sleep(5)
         browser.element('[class*="ButtonV1-module__button__orange"]').click()
         return self
 
