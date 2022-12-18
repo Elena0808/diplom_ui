@@ -1,6 +1,6 @@
 # Дипломный проект по UI автоматизации тестирования веб-сайта [LitRes](https://www.litres.ru/)
 <p align="left">
-  <img width="25%" src="logo/LitRes"/>
+  <img width="25%" src="logo/LitRes_logo.png"/>
 </p>
 
 ## Содержание:
@@ -11,4 +11,23 @@
 - [Пример прохождения тестов]()
 
 ## Реализованные проверки по тест-кейсам
+✓ Проверка авторизации при вводе валидных данных  
+✓ Проверка появления окна регистрации при вводе email под которым еще не зарегистрировались на сайте  
+✓ Проверка авторизации с невалидным паролем  
+✓ Проверка поиска отсутствующей книги  
+✓ Поиск существующей книги  
+✓ Поиск книг с параметрами  
+✓ Добавление книги в корзину ( отрабатывает локально, на selenide падает с ошибкой сессии)  
+✓ Создание нового списка книг  
+✓ Открытие фрагмента книги   
 
+## Используемый стек
+<p align="center">
+<code><img width="6%" title="Python" src="logo/python.svg"></code>
+<code><img width="6%" title="PyCharm" src="logo/pycharm.svg"></code>
+<code><img width="6%" title="Selene" src="logo/selene.png"></code>
+<code><img width="6%" title="PyTest" src="logo/pytest.svg"></code>
+<code><img width="6%" title="GitHub" src="logo/github.svg"></code>
+<code><img width="6%" title="Jenkins" src="logo/jenkins.svg"></code>
+<code><img width="6%" title="Allure" src="logo/allure.svg"></code>
+</p>
