@@ -1,10 +1,11 @@
 import pytest
 from dotenv import load_dotenv
-from selene import Browser, Config
 from selenium import webdriver
 from selene.support.shared import browser
 import os
 from selenium.webdriver.chrome.options import Options
+
+from litres.utils import attach
 
 
 @pytest.fixture(scope='function', autouse=False)
@@ -15,6 +16,10 @@ def driver_managment():
     browser.config.hold_browser_open = True
 
     yield
+    attach.add_html(browser)
+    attach.add_screenshot(browser)
+    attach.add_logs(browser)
+    attach.add_video(browser)
     browser.quit()
 
 
