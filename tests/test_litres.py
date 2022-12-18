@@ -43,7 +43,6 @@ def test_auth_with_not_exist_email():
         app.login_page.check_open_windows_registration()
 
 
-@pytest.mark.skip('Тест вызывает капчу при пакетном запуске')
 @allure.tag('web')
 @allure.severity(Severity.BLOCKER)
 @allure.label('owner', 'Elena0808')
@@ -108,6 +107,7 @@ def test_search_with_language_and_format():
         app.genre_page.check_set_format().check_set_language()
 
 
+@pytest.mark.skip('отрабатывает локально')
 @allure.tag('web')
 @allure.severity(Severity.BLOCKER)
 @allure.label('owner', 'Elena0808')

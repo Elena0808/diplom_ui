@@ -1,5 +1,5 @@
 import os
-from selene import have
+from selene import have, be
 from selene.support.shared import browser
 from litres.models.pages.home_page import HomePage
 import time
@@ -39,11 +39,9 @@ class LoginPage(HomePage):
         return self
 
     def check_open_windows_registration(self):
-        browser.element('//*[@id="__next"]/div[1]/header/div[2]/div[2]/div[2]/div/div/div/div/div[1]/div/form/div[1]')\
-            .should(have.text('Адрес свободен для регистрации'))
+        browser.element("//div[text()='Адрес свободен для регистрации']").should(be.visible)
         return self
 
     def check_error_auth(self):
-        browser.element('[class="AuthorizationPopup-module__error"]')\
-            .should(have.text('Неверное сочетание логина и пароля'))
+        browser.element("//div[text()='Неверное сочетание логина и пароля']").should(be.visible)
         return self
