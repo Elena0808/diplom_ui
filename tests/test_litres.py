@@ -155,6 +155,12 @@ def test_creating_new_folder_list():
         app.my_books.check_create_new_folder(data_my_books.name)
 
 
+@allure.tag('web')
+@allure.severity(Severity.NORMAL)
+@allure.label('owner', 'Elena0808')
+@allure.description('Книги')
+@allure.feature(f'Открытие книги "{data_home_page.book_to_read}"  на просмотр фрагмента')
+@allure.link('https://www.litres.ru')
 def test_error_open_pats_book_without_auth():
     with allure.step(
             f'Открываем главную страницу и вводим в поисковую строку название книги {data_home_page.book_to_read}'):
