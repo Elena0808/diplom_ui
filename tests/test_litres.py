@@ -122,7 +122,7 @@ def test_add_book_in_basket():
         app.home_page.open_page() \
             .search_book(data_home_page.book_to_read)
     with allure.step('Открываем найденную книгу'):
-        app.rmd_search_page.open_search_book(data_rmd_search.href_read_book)
+        app.rmd_search_page.open_serch_book_valid()
     with allure.step('Добавляем книгу в корзину'):
         app.book_page.add_in_basket() \
             .close_popap() \
