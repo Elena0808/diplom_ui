@@ -33,30 +33,6 @@ class MyBooks(HomePage):
         browser.element('[href="/pages/new_basket/"]').click()
         return self
 
-    '''def clean_basket(self):
-        browser.open('/pages/new_basket/')
-        element = browser.element('[class*="btn_link"]')
-        if element:
-            element.click()
-        return self
-
-    def clean_basket1(self):
-        browser.open('/pages/new_basket/')
-        element = browser.element('[class*="btn_link"]')
-        try: browser.element('[class*="btn_link"]'):
-            element.click()
-        except NoSuchElementException:
-            return self
-
-    def clean_basket3(self):
-        browser.open('/pages/new_basket/')
-        try:
-            element = browser.element('[class*="btn_link"]')
-            element.click()
-        except NoSuchElementException:
-            browser.open('/pages/new_basket/')
-        return self'''
-
     def clean_basket(self):
         browser.open('/pages/new_basket/')
         element = browser.all('[class*="btn_link"]')

@@ -48,3 +48,8 @@ def driver_managment_remote():
         options=options
     )
     browser.config.driver = driver
+
+    yield
+    attach.add_screenshot(browser)
+    attach.add_video(browser)
+    browser.quit()

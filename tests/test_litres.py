@@ -117,9 +117,6 @@ def test_search_with_language_and_format():
 def test_add_book_in_basket():
     with allure.step('Открываем главную страницу ЛитРеса'):
         load_dotenv()
-    with allure.step('Переходим в корзину и если есть добавленные книги, то очищаем ее'):
-        app.login_page.open_page()
-        app.my_books.clean_basket()
     with allure.step(
             f'Переходим на главную страницу и вводим в поиске наименование книги {data_home_page.book_to_read}'):
         app.home_page.open_page() \
@@ -135,7 +132,6 @@ def test_add_book_in_basket():
         app.book_page.check_add_in_basket()
 
 
-@pytest.mark.skip('in_progress')
 @allure.tag('web')
 @allure.severity(Severity.BLOCKER)
 @allure.label('owner', 'Elena0808')
@@ -145,7 +141,7 @@ def test_add_book_in_basket():
 def test_creating_new_folder_list():
     with allure.step('Открываем главную страницу ЛитРеса'):
         load_dotenv()
-    with allure.step('Авторизуемся в приложении и открываем страницу "Мои книги'):
+    with allure.step('Авторизуемся и открываем страницу "Мои книги'):
         app.login_page.open_page() \
             .click_login() \
             .login_by_email(os.getenv('EMAIL2')) \
