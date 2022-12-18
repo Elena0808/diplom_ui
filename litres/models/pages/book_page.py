@@ -1,5 +1,5 @@
 from selene.support.shared import browser
-from selene import have
+from selene import have, be
 from litres.models.pages.home_page import HomePage
 
 
@@ -28,6 +28,5 @@ class BookPage(HomePage):
         return self
 
     def check_add_in_basket(self):
-        browser.element('[class="firstString"]').should(have.text('Простые'))
-        browser.element('[class="secondString"]').should(have.text('волшебные вещи'))
+        browser.element('[href="/maks-fray/prostye-volshebnye-veschi/"]').should(be.visible)
         return self

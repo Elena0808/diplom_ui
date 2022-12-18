@@ -39,7 +39,7 @@ class LoginPage(HomePage):
         return self
 
     def check_open_windows_registration(self):
-        browser.element('[class="AuthorizationPopup-module__step__block AuthorizationPopup-module__greenText"]')\
+        browser.element('//*[@id="__next"]/div[1]/header/div[2]/div[2]/div[2]/div/div/div/div/div[1]/div/form/div[1]')\
             .should(have.text('Адрес свободен для регистрации'))
         return self
 
