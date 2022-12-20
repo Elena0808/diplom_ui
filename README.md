@@ -17,8 +17,8 @@
 ✓ Проверка поиска отсутствующей книги  
 ✓ Поиск существующей книги  
 ✓ Поиск книг с параметрами  
-✓ Добавление книги в корзину ( отрабатывает локально, на selenide падает с ошибкой сессии)  
-✓ Создание нового списка книг  
+✓ Добавление книги в корзину  
+✓ Создание нового списка книг   
 ✓ Открытие фрагмента книги   
 
 ## Используемый стек
@@ -31,3 +31,11 @@
 <code><img width="6%" title="Jenkins" src="logo/jenkins.svg"></code>
 <code><img width="6%" title="Allure" src="logo/allure.svg"></code>
 </p>
+
+## Сборка в Jenkins
+[Ссылка на Jenkins](https://jenkins.autotests.cloud/job/C02-les0808-22-ui/) 
+
+## Allure report
+[Ссылка на Allure report](https://jenkins.autotests.cloud/job/C02-les0808-22-ui/11/allure/)
+
+## Пример прохождения тестов
